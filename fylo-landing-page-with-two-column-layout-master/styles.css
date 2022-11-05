@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  /* primary-colors */
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  /* accent-colors */
+  --bright-blue: hsl(224, 93%, 58%);
+  --light-blue: hsl(224, 93%, 68%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --lighter-cyan: hsl(170, 45%, 53%);
+  --box-shadow: hsla(210, 8%, 62%, 0.2);
+  /* neutral colors */
+  --light-gray-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+  --white: hsl(0, 0%, 100%);
+  /* font family; body: 400 -- headings: 400/700*/
+  --font-family-body: "Open Sans", sans-serif;
+  --font-family-headings: "Raleway", sans-serif;
+  /* font size */
+  --font-size-headings: clamp(1.7rem, 1vw + 1rem, 3rem);
+  --font-size-paragraphs: clamp(1rem, 0.1vw + 1rem, 1rem);
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-paragraphs);
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+article {
+  padding: clamp(4rem, 10%, 8rem) 0;
+}
+
+.d-hidden {
+  display: none;
+}
+
+.font-headings {
+  font-size: var(--font-size-headings);
+  font-family: var(--font-family-headings);
+  line-height: 1.5;
+}
+
+.font-paragraph {
+  font-size: var(--font-size-paragraphs);
+  line-height: 1.5;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--bright-blue);
+  color: var(--light-gray-blue);
+  padding: 0.7em 4em;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--light-blue);
+}
+
+.email-input {
+  width: 55%;
+  min-width: 15rem;
+  padding: 0.5em 0.7em;
+}
+
+.email-input::placeholder {
+  color: var(--light-gray);
+}
+
+.section-container {
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.grid-two-columns {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+
+.grid-three-columns {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+  grid-template-rows: auto;
+  margin-top: 2rem;
+}
+
+.flex-text-wrapper {
+  width: 60%;
+  max-width: 33rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.header__logo {
+  width: clamp(7rem, 8vw + 1rem, 9rem);
+}
+
+.header__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__link {
+  position: relative;
+}
+
+.header__link:hover:after,
+.header__link:focus:after {
+  content: "";
+  position: absolute;
+  height: 0.12rem;
+  width: 100%;
+  background-color: var(--desaturated-blue);
+  left: 0;
+  top: 1.4em;
+  transition: all 5s;
+}
+
+/* hero */
+.hero {
+  margin-bottom: 8rem;
+}
+
+.hero__cta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+/* section two */
+.section-two {
+  background-color: var(--light-gray-blue);
+  position: relative;
+}
+
+.section-two__background-curve {
+  content: " ";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 5rem;
+  width: 100%;
+  top: -5rem;
+  left: 0;
+}
+
+.section-two--text-wrapper {
+  width: 70%;
+  max-width: 36rem;
+}
+
+/* ?: How do I make the hover affect affect all three items when one of them is hovered? */
+.section-two__link-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  position: relative;
+  margin-bottom: 2em;
+  width: 10.5rem;
+}
+
+.section-two__fylo-link,
+.section-two__fylo-icon {
+  display: block;
+  color: var(--moderate-cyan);
+}
+
+.section-two__link-container::after {
+  content: "";
+  position: absolute;
+  background-color: var(--moderate-cyan);
+  height: 0.1rem;
+  width: 10.3rem;
+  bottom: -0.3rem;
+}
+
+.section-two__link-container:hover .section-two__fylo-link,
+.section-two__link-container:hover .section-two__fylo-icon {
+  color: var(--lighter-cyan);
+  cursor: pointer;
+}
+
+.section-two__link-container:hover::after {
+  background-color: var(--lighter-cyan);
+  cursor: pointer;
+}
+/* ?? */
+
+.section-two__quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  line-height: 1.5;
+  width: 90%;
+  max-width: 25rem;
+  background-color: var(--white);
+  padding: 2em;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow) 0 0.5rem 1.5rem;
+}
+
+.section-two__quote-img {
+  width: 1rem;
+}
+
+.section-two__quote-text {
+  font-size: 0.9rem;
+}
+
+.section-two__user-wrapper {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.section-two__user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.section-two__user-info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-two__citation {
+  font-style: normal;
+}
+
+.section-two___user-name {
+  font-family: var(--font-family-headings);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.section-two_user-quote {
+  font-size: 0.8rem;
+}
+
+/* section three */
+.section-three {
+  background-color: var(--desaturated-blue);
+  color: var(--light-gray-blue);
+}
+
+.section-three__email-input {
+  width: 80%;
+}
+
+.section-three__btn {
+  padding: 0.7em 2em;
+}
+
+.section-three__cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+/* footer */
+footer {
+  background-color: var(--very-dark-blue);
+  color: var(--light-gray-blue);
+}
+
+.footer-container {
+  padding: 4rem 0;
+}
+
+.footer-container__logo {
+  filter: brightness(0) invert(1);
+  width: clamp(7rem, 7vw + 1rem, 8rem);
+}
+
+.footer-container__contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer-container__info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.footer-container__links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1em;
+}
+
+.footer-container__icons-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+.footer-container__icon {
+  border: 0.09rem solid var(--light-gray-blue);
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+.footer-container__link,
+.footer-container__icon {
+  cursor: pointer;
+}
+
+.footer-container__link:hover,
+.footer-container__link:focus {
+  color: var(--bright-blue);
+}
+
+.footer-container__icon:hover,
+.footer-container__icon:focus {
+  color: var(--bright-blue);
+  border-color: var(--bright-blue);
+}
+
+/* media queries */
+@media (max-width: 50rem) {
+  .grid-two-columns {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 3em;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+
+  .section-img {
+    grid-row: 1;
+    width: 80%;
+    justify-self: center;
+  }
+
+  .hero__form-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__cta-wrapper {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .flex-text-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-two__quote-text,
+  .section-two___user-name {
+    text-align: left;
+  }
+
+  .section-two--text-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-three__form-wrapper {
+    width: 70%;
+  }
+
+  .grid-three-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+  }
+
+  .footer-container__icons-wrapper {
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 40rem) {
+  .grid-three-columns {
+    grid-template-columns: 1fr;
+  }
+  .footer-container__links {
+    grid-template-columns: 1fr;
+  }
+  .footer-container__icons-wrapper {
+    grid-column: auto;
+  }
+}
