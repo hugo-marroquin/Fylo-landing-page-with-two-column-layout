@@ -21,6 +21,7 @@ html {
   --bg-footer: hsl(243, 87%, 12%);
   --bg-section-blue: hsl(238, 22%, 44%);
   --bg-section-light-blue: hsl(240, 75%, 98%);
+  --bg-quote-section: hsl(0, 0%, 100%);
   /* button colors */
   --bg-btn-primary: hsl(224, 93%, 58%);
   --bg-btn-primary-hover: hsl(224, 93%, 68%);
@@ -246,6 +247,7 @@ article {
   background-color: var(--);
   padding: 2em;
   border-radius: 0.5rem;
+  background-color: var(--bg-quote-section);
   box-shadow: var(--clr-box-shadow) 0 0.5rem 1.5rem;
 }
 
