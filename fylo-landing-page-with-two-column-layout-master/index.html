@@ -15,8 +15,10 @@
   </head>
   <body>
     <!-- header -->
-    <header class="header section-container">
-      <img src="/images/logo.svg" alt="Fylo - Home" class="header__logo" />
+    <header class="header container">
+      <a href="#"
+        ><img src="/images/logo.svg" alt="Fylo - Home" class="header__logo"
+      /></a>
       <nav class="header__navbar">
         <ul class="header__links">
           <li><a href="#" class="header__link">Features</a></li>
@@ -27,32 +29,30 @@
     </header>
     <main>
       <!-- hero -->
-      <article class="hero">
-        <div class="grid-two-columns section-container">
+      <article class="main__hero container">
+        <div class="grid-two-columns">
           <div class="text-wrapper">
             <div class="flex-text-wrapper">
-              <h1 class="font-headings">
+              <h1 class="font-size-headings">
                 All your files in one secure location, accessible anywhere.
               </h1>
-              <p class="font-paragraph">
+              <p class="font-size-paragraph">
                 Fylo stores your most important files in one secure location.
                 Access them wherever you need, share and collaborate with
                 friends, family, and co-workers.
               </p>
-              <form action="/" method="GET" class="hero__form-wrapper">
-                <div class="hero__cta-wrapper">
-                  <label for="email" class="d-hidden">Email</label>
+              <form action="/" method="GET" class="main__hero-form-wrapper">
+                <div class="main__hero-cta-wrapper">
+                  <label for="email-hero" class="display-hidden">Email</label>
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="email-hero"
+                    name="email-hero"
+                    id="email-hero"
                     placeholder="Enter your email..."
-                    class="email-input"
+                    class="input-email"
                     required
                   />
-                  <button type="submit" class="hero__btn btn">
-                    Get Started
-                  </button>
+                  <button type="submit" class="btn">Get Started</button>
                 </div>
               </form>
             </div>
@@ -65,62 +65,69 @@
         </div>
       </article>
       <!-- section two -->
-      <article class="section-two">
+      <article class="main__section-two">
         <picture>
           <source
             media="(max-width: 50rem)"
             srcset="/images/bg-curve-mobile.svg"
             alt=""
-            class="section-two__background-curve"
+            class="section-two__bg-curve"
           />
           <img
             src="/images/bg-curve-desktop.svg"
             alt=""
-            class="section-two__background-curve"
+            class="section-two__bg-curve"
           />
         </picture>
-        <div class="grid-two-columns section-container">
-          <div class="flex-text-wrapper section-two--text-wrapper">
-            <h2 class="font-headings">Stay productive, wherever you are</h2>
-            <p class="font-paragraph">
+        <div class="grid-two-columns container">
+          <div class="flex-text-wrapper main__section-two-text-wrapper">
+            <h2 class="font-size-headings">
+              Stay productive, wherever you are
+            </h2>
+            <p class="font-size-paragraph main__section-two-paragraph">
               Never let location be an issue when accessing your files. Fylo has
               you covered for all of your file storage needs.
             </p>
-            <p class="font-paragraph">
+            <p class="font-size-paragraph main__section-two-paragraph">
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required!
             </p>
-            <div class="section-two__link-container">
-              <a href="#" class="section-two__fylo-link">See how Fylo works</a>
+            <div class="main__section-two-link-container">
+              <a href="#" class="main__section-two-link">See how Fylo works</a>
               <div>
                 <ion-icon
                   name="arrow-forward-circle-outline"
-                  class="section-two__fylo-icon"
+                  class="main__section-two-icon"
                 ></ion-icon>
               </div>
             </div>
-            <figure class="section-two__quote-wrapper">
+            <!-- section two quote -->
+            <figure class="main__section-two-quote-wrapper">
               <img
                 src="/images/icon-quotes.svg"
                 alt=""
-                class="section-two__quote-img img"
+                class="main__section-two-quote-img img"
               />
-              <blockquote class="section-two__quote-text">
+              <blockquote class="main__section-two-quote-text">
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
                 well-oiled collaboration machine.
               </blockquote>
-              <figcaption class="section-two__user-wrapper">
+              <figcaption class="main__section-two-cite-wrapper">
                 <img
                   src="/images/avatar-testimonial.jpg"
                   alt=""
-                  class="section-two__user-img img"
+                  class="main__section-two-cite-img img"
                 />
-                <div class="section-two__user-info-wrapper">
-                  <cite class="section-two__citation">
-                    <p class="section-two___user-name">Kyle Burton</p>
-                    <p class="section-two_user-quote">Founder & CEO, Huddle</p>
-                  </cite>
+                <div class="main__section-two-user-info-wrapper">
+                  <p>
+                    <cite class="main__section-two-cite-user-name"
+                      >Kyle Burton</cite
+                    >
+                    <span class="main__section-two-cite-user-info"
+                      >Founder & CEO, Huddle</span
+                    >
+                  </p>
                 </div>
               </figcaption>
             </figure>
@@ -133,28 +140,32 @@
         </div>
       </article>
       <!-- section three -->
-      <article class="section-three">
-        <div class="grid-two-columns section-container">
+      <article class="main__section-three">
+        <div class="container grid-two-columns">
           <div class="flex-text-wrapper">
-            <h2 class="font-headings">Get early access today</h2>
-            <p class="font-paragraph">
+            <h2 class="font-size-headings">Get early access today</h2>
+            <p class="font-size-paragraph">
               It only takes a minute to sign up and our free starter tier is
               extremely generous. If you have any questions, our support team
               would be happy to help you.
             </p>
           </div>
-          <form action="/" method="GET" class="section-three__form-wrapper">
-            <div class="section-three__cta-wrapper">
-              <label for="email" class="d-hidden">Email</label>
+          <form
+            action="/"
+            method="GET"
+            class="main__section-three-form-wrapper"
+          >
+            <div class="main__section-three-cta-wrapper">
+              <label for="email-section" class="display-hidden">Email</label>
               <input
-                type="email"
-                name="email"
-                id="email"
+                type="email-section"
+                name="email-section"
+                id="email-section"
                 placeholder="email@example.com"
                 required
-                class="section-three__email-input email-input"
+                class="input-email main__section-three-email-input"
               />
-              <button type="submit" class="section-three__btn btn">
+              <button type="submit" class="btn btn--section-three">
                 Get Started For Free
               </button>
             </div>
@@ -164,47 +175,43 @@
     </main>
     <footer>
       <!-- footer -->
-      <div class="footer-container section-container">
-        <img
-          src="/images/logo.svg"
-          alt="Fylo - Copyright 2022"
-          class="footer-container__logo"
-        />
+      <div class="container container--footer">
+        <a href="#"
+          ><img
+            src="/images/logo.svg"
+            alt="Fylo - Copyright 2022"
+            class="footer__logo"
+        /></a>
         <div class="grid-three-columns">
-          <div class="footer-container__contact-wrapper">
-            <div class="footer-container__info-wrapper">
+          <div class="footer__contact-wrapper">
+            <div class="footer__info-wrapper">
               <ion-icon name="call"></ion-icon>
-              <p>Phone: +1-543-123-4567</p>
+              <p>
+                <a href="#" class="footer__info-link">Phone: +1-543-123-4567</a>
+              </p>
             </div>
-            <div class="footer-container__info-wrapper">
+            <div class="footer__info-wrapper">
               <ion-icon name="mail"></ion-icon>
-              <p>example@fylo.com</p>
+              <p><a href="#" class="footer__info-link">example@fylo.com</a></p>
             </div>
           </div>
           <div>
-            <ul class="footer-container__links">
-              <li class="footer-container__link">About Us</li>
-              <li class="footer-container__link">Jobs</li>
-              <li class="footer-container__link">Press</li>
-              <li class="footer-container__link">Blog</li>
-              <li class="footer-container__link">Contact Us</li>
-              <li class="footer-container__link">Terms</li>
-              <li class="footer-container__link">Privacy</li>
+            <ul class="footer__links-wrapper">
+              <li class="footer__list"><a class="footer__link">About Us</a></li>
+              <li class="footer__list"><a class="footer__link">Jobs</a></li>
+              <li class="footer__list"><a class="footer__link">Press</a></li>
+              <li class="footer__list"><a class="footer__link">Blog</a></li>
+              <li class="footer__list">
+                <a class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__list"><a class="footer__link">Terms</a></li>
+              <li class="footer__list"><a class="footer__link">Privacy</a></li>
             </ul>
           </div>
-          <div class="footer-container__icons-wrapper">
-            <ion-icon
-              name="logo-facebook"
-              class="footer-container__icon"
-            ></ion-icon>
-            <ion-icon
-              name="logo-twitter"
-              class="footer-container__icon"
-            ></ion-icon>
-            <ion-icon
-              name="logo-instagram"
-              class="footer-container__icon"
-            ></ion-icon>
+          <div class="footer__icons-wrapper">
+            <ion-icon name="logo-facebook" class="footer__icon"></ion-icon>
+            <ion-icon name="logo-twitter" class="footer__icon"></ion-icon>
+            <ion-icon name="logo-instagram" class="footer__icon"></ion-icon>
           </div>
         </div>
       </div>
